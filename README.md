@@ -8,7 +8,9 @@ To create local Minikube LAMP stack follow the steps listed below:
 
 **1. Create local Minikube cluster and enable Ingress**
 >$ minikube start
+
 >$ minikube addons enable ingress
+
 >$ minikube addons enable ingress-dns
 
 **2. Clone this repository**
@@ -16,6 +18,7 @@ To create local Minikube LAMP stack follow the steps listed below:
 
 **3. To create LAMP stack use provided script**
 > $ sudo chmod +x ./script.sh
+
 > $ ./script.sh
 
 The script will automatically try to do these things:
@@ -33,14 +36,19 @@ The script will automatically try to do these things:
 	 
 **4. If everything has gone correctly you can check the output of following commands:**
 >$ kubectl get pods
+
 >$ kubectl get service
+
 >$ kubectl get ingress
+
 >$ kubectl get pv
+
 >$ kubectl get pvc
 
 
 **5. You can use provided script to insert example data into MySQL database**
 > $ sudo chmod +x ./insertToDB.sh
+
 > $ ./insertToDB.sh
 
 Now you should be able to get Ingress IP address and and check whether everything works correctly
@@ -62,13 +70,16 @@ OR
 username: **root**
 password: **reTsec132409**
 > \# mysql -u root -p
+
 Enter password: reTsec132409
+
 > mysql> USE webAppDB;
 
 Then you can execute any MySQL DDL, DML, DQL or any other type of query inside the database
 
 **To revert all made changes you can use cleanup script**
 > $ sudo chmod +x  ./cleanup.sh
+
 > $ ./cleanup.sh
 
 
