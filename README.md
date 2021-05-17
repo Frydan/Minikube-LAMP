@@ -3,7 +3,8 @@ Requirements:
  - Minikube
  - Kubectl
  - Docker
-
+<br />
+<br />
 To create local Minikube LAMP stack follow the steps listed below:
 
 **1. Create local Minikube cluster and enable Ingress**
@@ -13,20 +14,22 @@ To create local Minikube LAMP stack follow the steps listed below:
 
 >$ minikube addons enable ingress-dns
 
-
+<br />
+<br />
 
 **2. Clone this repository**
-> $ git clone https://github.com/Frydan/Minikube-LAMP-Cluster.git
+> $ git clone https://github.com/Frydan/Minikube-LAMP.git
 
-
+<br />
+<br />
 
 **3. To create LAMP stack use provided script**
 > $ sudo chmod +x ./script.sh
 
 > $ ./script.sh
 
-
-
+<br />
+<br />
 The script will automatically try to do these things:
 (for more details check the script itself)
 
@@ -40,8 +43,8 @@ The script will automatically try to do these things:
 	 - MySQL deployment
 	 - Ingress
 
-
-
+<br />
+<br />
 **4. If everything has gone correctly you can check the output of following commands:**
 >$ kubectl get pods
 
@@ -53,8 +56,8 @@ The script will automatically try to do these things:
 
 >$ kubectl get pvc
 
-
-
+<br />
+<br />
 **5. You can use provided script to insert example data into MySQL database**
 > $ sudo chmod +x ./insertToDB.sh
 
@@ -86,16 +89,15 @@ Enter password: reTsec132409
 
 Then you can execute any MySQL DDL, DML, DQL or any other type of query inside the database
 
-
-
+<br />
+<br />
 **To revert all made changes you can use cleanup script**
 > $ sudo chmod +x  ./cleanup.sh
 
 > $ ./cleanup.sh
 
-
-
-
+<br />
+<br />
 # INCLUDED FILES
 **./script.sh** - Main script putting everything together
 
