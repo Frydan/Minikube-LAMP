@@ -24,9 +24,9 @@ To create local Minikube LAMP stack follow the steps listed below:
 <br />
 
 **3. To create LAMP stack use provided script**
-> $ sudo chmod +x ./script.sh
+> $ sudo chmod +x ./script.sh ./startup.sh
 
-> $ ./script.sh
+> $ ./startup.sh
 
 <br />
 <br />
@@ -42,6 +42,7 @@ The script will automatically try to do these things:
 	 - Apache-PHP deployment with image pulled from local docker repository
 	 - MySQL deployment
 	 - Ingress
+ - Log script output at separate log files in /logs directory
 
 <br />
 <br />
@@ -99,7 +100,9 @@ Then you can execute any MySQL DDL, DML, DQL or any other type of query inside t
 <br />
 <br />
 # INCLUDED FILES
-**./script.sh** - Main script putting everything together
+**./startup.sh** - Main script for starting everything up
+
+**./script.sh** - Script putting everything together
 
 **./cleanup.sh** - Script for cleaning up everything created by ./script.sh
 
@@ -112,5 +115,7 @@ Then you can execute any MySQL DDL, DML, DQL or any other type of query inside t
 **website** - Directory with PHP website files using which our Docker image is created
 
 **sql** - Directory where simple example SQL query is stored, which is used by **./insertDataToDB.sh**
+
+**logs** - Directory with all log files
 
 
