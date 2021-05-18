@@ -6,6 +6,8 @@ Requirements:
 <br />
 <br />
 To create local Minikube LAMP stack follow the steps listed below:
+<br />
+<br />
 
 **1. Create local Minikube cluster and enable Ingress**
 >$ minikube start
@@ -30,6 +32,7 @@ To create local Minikube LAMP stack follow the steps listed below:
 
 <br />
 <br />
+
 The script will automatically try to do these things:
 (for more details check the script itself)
 
@@ -46,6 +49,7 @@ The script will automatically try to do these things:
 
 <br />
 <br />
+
 **4. If everything has gone correctly you can check the output of following commands:**
 >$ kubectl get pods
 
@@ -59,6 +63,7 @@ The script will automatically try to do these things:
 
 <br />
 <br />
+
 **5. You can use provided script to insert example data into MySQL database**
 > $ sudo chmod +x ./insertToDB.sh
 
@@ -92,7 +97,9 @@ Then you can execute any MySQL DDL, DML, DQL or any other type of query inside t
 
 <br />
 <br />
+
 **To revert all made changes you can use cleanup script**
+
 > $ sudo chmod +x  ./cleanup.sh
 
 > $ ./cleanup.sh
@@ -100,6 +107,7 @@ Then you can execute any MySQL DDL, DML, DQL or any other type of query inside t
 <br />
 <br />
 # INCLUDED FILES
+
 **./startup.sh** - Main script for starting everything up
 
 **./script.sh** - Script putting everything together
@@ -116,6 +124,6 @@ Then you can execute any MySQL DDL, DML, DQL or any other type of query inside t
 
 **sql** - Directory where simple example SQL query is stored, which is used by **./insertDataToDB.sh**
 
-**logs** - Directory with all log files
+**logs** - Directory with all log files (created after first start)
 
 
